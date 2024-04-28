@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing Digital | Mejora tu Presencia Online</title>
+    <meta name="description" content="Somos una agencia de marketing digital especializada en SEO, SEM y redes sociales. Mejora tu visibilidad online con nuestros servicios. Contacta hoy mismo.">
+    <meta name="keywords" content="marketing digital, agencia de marketing, SEO, SEM, redes sociales">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+        }
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 30px;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-width: 75%;
+            margin: auto;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .checklist {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        /* Estilos para el modo oscuro */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark-mode header, body.dark-mode footer {
+            background-color: #222;
+        }
+        body.dark-mode section {
+            background-color: #444;
+            border-color: #666;
+        }
+        body.dark-mode h1, body.dark-mode h2 {
+            color: #cecece;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Agencia de Marketing Digital</h1>
+    <p id="welcome-message"></p>
+    <button onclick="toggleDarkMode()">Modo Oscuro</button>
+    <button onclick="changeLanguage()">English</button>
+</header>
+
+<section>
+    <h2>Servicios de Marketing Digital</h2>
+    <ul>
+        <li>Optimización de motores de búsqueda (SEO) para mejorar tu ranking en Google.</li>
+        <li>Campañas de publicidad en buscadores (SEM) para atraer tráfico cualificado.</li>
+        <li>Marketing en redes sociales para aumentar tu presencia en plataformas como Facebook, Instagram y LinkedIn.</li>
+        <li>Creación de contenido digital de calidad que atraiga a tu audiencia objetivo.</li>
+        <li>Análisis de datos y estrategias de crecimiento basadas en métricas y resultados medibles.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Beneficios de Nuestros Servicios</h2>
+    <ul>
+        <li>Aumento de la visibilidad y reconocimiento de tu marca online.</li>
+        <li>Generación de leads cualificados y aumento de conversiones.</li>
+        <li>Mayor tráfico orgánico y posicionamiento en buscadores.</li>
+        <li>Acceso a estrategias avanzadas de marketing digital adaptadas a tus necesidades.</li>
+        <li>Asesoramiento personalizado y atención al cliente dedicada.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Consejos de SEO para Mejorar tu Presencia Online</h2>
+    <p>Aquí te dejamos algunos consejos de SEO que pueden ayudarte a optimizar tu presencia online:</p>
+    <ul class="checklist">
+        <li>Utiliza palabras clave relevantes en tu contenido y metaetiquetas.</li>
+        <li>Optimiza la velocidad de carga de tu sitio web para mejorar la experiencia del usuario.</li>
+        <li>Crea contenido original y de calidad de manera regular.</li>
+        <li>Construye enlaces de manera natural desde sitios web relevantes.</li>
+        <li>Mejora la usabilidad y la navegación de tu sitio web.</li>
+        <li>Utiliza etiquetas de encabezado (H1, H2, H3) para estructurar tu contenido.</li>
+        <li>Optimiza tus imágenes utilizando texto alternativo (alt text).</li>
+        <li>Realiza un análisis regular de palabras clave y de la competencia.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Recomendaciones SEO para Optimizar Imágenes</h2>
+    <p>A continuación, te presentamos algunas recomendaciones SEO para optimizar las imágenes en tu sitio web:</p>
+    <ul class="checklist">
+        <li>Utiliza imágenes optimizadas en formatos como JPEG o PNG para reducir el tamaño de archivo.</li>
+        <li>Comprime tus imágenes utilizando herramientas como TinyPNG o Compressor.io.</li>
+        <li>Agrega texto alternativo descriptivo (alt text) a cada imagen para mejorar la accesibilidad y el SEO.</li>
+        <li>Usa dimensiones adecuadas para tus imágenes y evita redimensionarlas con CSS.</li>
+        <li>Considera la carga diferida (lazy loading) para imágenes fuera del viewport inicial.</li>
+        <li>Evita el uso excesivo de imágenes en formato GIF animado, ya que pueden afectar el tiempo de carga.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>Contáctanos hoy para recibir una consulta gratuita sobre tus estrategias de marketing digital.</p>
+    <p>Teléfono: 123-456-789</p>
+    <p>Email: info@ejemplo.com</p>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+
+    function changeLanguage() {
+        const currentLanguage = document.documentElement.lang;
+        const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+
+        // Cambiar el idioma del documento HTML
+        document.documentElement.lang = newLanguage;
+
+        // Cambiar el contenido de los elementos según el idioma seleccionado
+        const languageContent = {
+            'es': {
+                'welcome_message': '¡Bienvenido!',
+                'contact_us': 'Contáctanos hoy para recibir una consulta gratuita sobre tus estrategias de marketing digital.',
+            },
+            'en': {
+                'welcome_message': 'Welcome!',
+                'contact_us': 'Contact us today for a free consultation on your digital marketing strategies.',
+            }
+        };
+
+        // Cambiar el contenido de los elementos según el idioma seleccionado
+        document.getElementById('welcome-message').textContent = languageContent[newLanguage]['welcome_message'];
+        document.querySelector('footer p:first-child').textContent = languageContent[newLanguage]['contact_us'];
+    }
+
+    // Función para obtener la ubicación del usuario y mostrar el clima
+    function getWeather() {
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(async position => {
+                const { latitude, longitude } = position.coords;
+                const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+                const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=es&units=metric`;
+
+                try {
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+
+                    const weatherDescription = data.weather[0].description;
+                    const temperature = data.main.temp;
+
+                    const weatherInfo = `Clima: ${weatherDescription}, Temperatura: ${temperature}°C`;
+                    const weatherElement = document.createElement('p');
+                    weatherElement.textContent = weatherInfo;
+                    document.querySelector('header').appendChild(weatherElement);
+                } catch (error) {
+                    console.error('Error fetching weather data:', error);
+                }
+            });
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+        }
+    }
+
+    // Llamar a la función para obtener el clima al cargar la página
+    getWeather();
+</script>
+
+</body>
+</html>

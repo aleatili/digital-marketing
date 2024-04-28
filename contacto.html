@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form id="contactForm" onsubmit="submitForm(event)">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="empresa">Empresa:</label>
+    <input type="text" id="empresa" name="empresa" required><br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            empresa: document.getElementById('empresa').value,
+            telefono: document.getElementById('telefono').value,
+            email: document.getElementById('email').value
+        };
+
+        // Enviar los datos del formulario al script de Google Apps Script
+        sendDataToGoogleAppsScript(formData);
+    }
+
+    async function sendDataToGoogleAppsScript(formData) {
+        const url = 'https://script.google.com/macros/library/d/1eJmgrLQ1ZMIVPX6OA9CRemLui5bBcNZDMDN9-DVCGQJgrVHJRfcEmoxK/6'; // Reemplaza con la URL de tu script de Google Apps Script
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            console.log('Respuesta del script de Google Apps Script:', await response.text());
+            // Manejar la respuesta del script de Google Apps Script
+        } catch (error) {
+            console.error('Error al enviar datos al script de Google Apps Script:', error);
+            // Manejar el error
+        }
+    }
+</script>
+</body>
+</html>
